@@ -18,6 +18,7 @@ export class UsersController {
         return this.usersService.getAllUser();
     }
 
+
     
 
     @Put(':id')
@@ -53,5 +54,10 @@ export class UsersController {
             throw new NotFoundException('User not found');
         }
         return user;
+    }
+    
+    @Get("searchForMaleUser")
+    async searchForMale(){
+        const male=await this.usersService.getMUser();
     }
 }

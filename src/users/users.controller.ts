@@ -54,4 +54,9 @@ export class UsersController {
         }
         return user;
     }
+
+    @Get("searchForMaleUser")
+    async searchForMale(){
+        const male=await this.usersService.getMUser();
+    }
 }

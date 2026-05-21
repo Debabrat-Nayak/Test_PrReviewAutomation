@@ -47,4 +47,8 @@ return {message:"Entery is duplicate"}
 async deleteById(id:string){
 return this.userModel.findByIdAndDelete(id).exec
 }
+
+async getMUser(){
+  return this.userModel.find({ gender: 'male' });
+}
 }
